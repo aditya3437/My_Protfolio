@@ -59,21 +59,12 @@ export default function Experience() {
             ],
           },
           {
-            title: "Junior Developer",
-            company: "Robral Technologies Pvt Ltd | Jan 2025 - May 2025",
+            title: "SDE-I",
+            company: "Robral Technologies Pvt Ltd | Jan 2024 - May 2025",
             points: [
-              "Built interactive user interfaces using React and Laravel, with Node.js for backend services",
+              "Built interactive user interfaces using React and Laravel, enhancing user experience",
               "Deployed applications on AWS and ensured smooth cross-platform performance",
               "Integrated RESTful APIs to fetch, process, and display dynamic data",
-            ],
-          },
-          {
-            title: "Full Stack Developer",
-            company: "Artistic Bird Technologies | Feb 2024 - Dec 2024",
-            points: [
-              "Assisted in developing full-stack web applications using PHP, Laravel, React.js, and MySQL",
-              "Created reusable frontend components using React and Tailwind CSS",
-              "Participated in code reviews, debugging, and project documentation",
             ],
           },
           ].map((job, i) => (
