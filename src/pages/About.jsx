@@ -1,5 +1,3 @@
-import { Github, Linkedin, Download, ExternalLink } from "lucide-react";
-
 export default function About() {
   return (
     <section className="pt-8 pb-24 min-h-screen bg-gradient-to-b from-[#060b17] to-[#0b1220] text-white">

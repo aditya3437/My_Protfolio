@@ -14,13 +14,14 @@ export default function Contact() {
     const message = form.message.value.trim();
     const phonenumber = form.phonenumber?.value.trim();
 
-    if (!/^[0-9]{10}$/.test(phonenumber)) {
-      setStatus("❌ Please enter a valid 10-digit phone number");
+    // 🔐 Simple validation
+    if (!name || !email || !message || !phonenumber) {
+      setStatus("❌ Please fill all fields");
       return;
     }
-    // 🔐 Simple validation
-    if (!name || !email || !message ||!phonenumber) {
-      setStatus("❌ Please fill all fields");
+
+    if (!/^[0-9]{10}$/.test(phonenumber)) {
+      setStatus("❌ Please enter a valid 10-digit phone number");
       return;
     }
 
@@ -81,6 +82,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   placeholder="Your Name"
+                  autoComplete="name"
                   className="w-full p-2 rounded-lg bg-[#060b17]/50 border border-white/20 focus:border-cyan-400 focus:outline-none"
                 />
               </div>
@@ -94,6 +96,7 @@ export default function Contact() {
                   name="email"
                   type="email"
                   placeholder="Your Email"
+                  autoComplete="email"
                   className="w-full p-2 rounded-lg bg-[#060b17]/50 border border-white/20 focus:border-cyan-400 focus:outline-none"
                 />
               </div>
@@ -110,6 +113,7 @@ export default function Contact() {
                 name="phonenumber"
                 type="tel"
                 placeholder="Your Phone Number"
+                autoComplete="tel"
                 inputMode="numeric"
                 pattern="[0-9]{10}"
                 maxLength={10}

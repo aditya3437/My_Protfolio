@@ -17,7 +17,7 @@ const navItems = [
   { to: "/about", label: "About", icon: User },
   { to: "/projects", label: "Projects", icon: FolderGit2 },
   { to: "/skills", label: "Skills", icon: Brain },
-  { to: "/experiance", label: "Experience", icon: Briefcase },
+  { to: "/experience", label: "Experience", icon: Briefcase },
   { to: "/certificates", label: "Certificates", icon: Award },
   { to: "/contact", label: "Contact", icon: Phone },
 ];
@@ -61,6 +61,8 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
           className="md:hidden text-gray-300 hover:text-cyan-400"
         >
           {open ? <X size={26} /> : <Menu size={26} />}
